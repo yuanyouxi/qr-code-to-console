@@ -1,0 +1,35 @@
+= Qr Code to Console
+
+A library to print zxing qr code to console. Inspired by https://github.com/Auties00/QrToTerminal[QrToTerminal] which support Java 11 or above.
+
+Write this project to support Java 8.
+
+== Getting started
+
+Maven
+
+[source,xml]
+----
+<dependency>
+    <groupId>xyz.dunjiao.cloud</groupId>
+    <artifactId>qr-to-console</artifactId>
+    <version>1.0</version>
+</dependency>
+----
+
+Print to console directly
+
+[source,java]
+----
+BitMatrix bitMatrix = qrCodeWriter.encode(input, BarcodeFormat.QR_CODE, size, size, hintMap);
+QRCodeUtils.print(bitMatrix, true);
+
+----
+
+Get the string use later like in https://github.com/spring-projects/spring-shell[Spring Shell]
+
+[source,java]
+----
+BitMatrix bitMatrix = qrCodeWriter.encode(input, BarcodeFormat.QR_CODE, size, size, hintMap);
+return QRCodeUtils.toString(bitMatrix, true);
+----
