@@ -7,6 +7,7 @@
     <version>1.0</version>
     <name>QrToConsole</name>
     <description>Prints a qr code generated from zxing to the terminal, support java 1.8</description>
+    <url>https://github.com/yuanyouxi/qr-code-to-console</url>
     <developers>
         <developer>
             <name>Yuan Kai</name>
@@ -20,6 +21,11 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <scm>
+        <connection>scm:git:git://github.com/yuanyouxi/qr-code-to-console.git</connection>
+        <developerConnection>scm:git:ssh://github.com:yuanyouxi/qr-code-to-console.git</developerConnection>
+        <url>https://github.com/yuanyouxi/qr-code-to-console/tree/master</url>
+    </scm>
     <distributionManagement>
         <repository>
             <id>ossrh</id>
