@@ -33,3 +33,14 @@ Get the string use later like in https://github.com/spring-projects/spring-shell
 BitMatrix bitMatrix = qrCodeWriter.encode(input, BarcodeFormat.QR_CODE, size, size, hintMap);
 return QRCodeUtils.toString(bitMatrix, true);
 ----
+
+== Console support
+Windows powershell change encoding
+[source,shell]
+----
+chcp 437
+----
+
+Linux suggest to set lang to en_US.UTF-8
+
+For Xshell display the QR code correctly, need to uncheck properties->terminal->Treat Ambiguously sized characters as wide
