@@ -27,7 +27,6 @@ jobs:
       - name: Publish package
         run: |
           mvn \
-            -P gpg_verify \
             --batch-mode \
             --no-transfer-progress \
             -Dgpg.passphrase=${{ secrets.GPG_PASSPHRASE }} \
