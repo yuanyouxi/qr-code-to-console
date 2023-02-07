@@ -39,6 +39,7 @@
         <compiler.plugin.version>3.8.1</compiler.plugin.version>
         <source.plugin.version>3.0.1</source.plugin.version>
         <javadoc.plugin.version>3.2.0</javadoc.plugin.version>
+        <nexus.staging.maven.plugin>1.6.7</nexus.staging.maven.plugin>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -86,6 +87,17 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>${nexus.staging.maven.plugin}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
             </plugin>
         </plugins>
     </build>
